@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -24,30 +25,19 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void OnClick(InputAction.CallbackContext context)
     {
-        CharMove();
-        
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
-        }
-     
-    }
-
-    public void CharMove()
-    {
-        transform.Translate(speed * Vector3.right * Time.deltaTime, Space.World);
-    }
-
-    public void Jump()
-    {
-        if (jumpcount < 3)
-        {
+        Debug.Log(context);
+        if (context.phase == InputActionPhase.Started) {
             rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
             jumpcount++;
         }
     }
+
+    //public void CharMove()
+    //{
+    //    transform.Translate(speed * Vector3.right * Time.deltaTime, Space.World);
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
