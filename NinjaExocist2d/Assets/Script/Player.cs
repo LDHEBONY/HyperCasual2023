@@ -28,8 +28,10 @@ public class Player : MonoBehaviour
     public void OnClick(InputAction.CallbackContext context)
     {
         Debug.Log(context);
-        if (context.phase == InputActionPhase.Started) {
+        if (context.phase == InputActionPhase.Started && jumpcount < 2) {
+            float high = transform.position.y;
             rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+            //addforce를 쓰니까 연속으로 뛰었을 때 점프 가속력이 높아지는 문제가 있음
             jumpcount++;
         }
     }
