@@ -123,6 +123,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &25937598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25937600}
+  - component: {fileID: 25937599}
+  m_Layer: 0
+  m_Name: MonsterSpon
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &25937599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25937598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb6b2deea5e86e4ebdf4f5cf69dec42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mon1Prefab: {fileID: 1127717741491452013, guid: b2f67257550bcef4b9c672fcc3a062a5, type: 3}
+  mon2Prefab: {fileID: 8721438128241256150, guid: 5c82dcc7572e72444b0ef1dc2d409612, type: 3}
+  mon3Prefab: {fileID: 508575520286134864, guid: f10a947cd8c86e540b6faf9e4719548d, type: 3}
+  mon4Prefab: {fileID: 7342954290505237616, guid: 78bd46ab1d0d84b4baf483a9704680ae, type: 3}
+  mon1delay: 2
+  mon2delay: 4
+  mon3delay: 20
+  mon4delay: 10
+--- !u!4 &25937600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25937598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: -2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +1875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 0}
-  JumpPower: 4
+  JumpPower: 6
   speed: 2
   jumpcount: 0
 --- !u!4 &1093211467
