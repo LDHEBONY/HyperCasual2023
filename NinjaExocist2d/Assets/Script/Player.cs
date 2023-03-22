@@ -29,8 +29,11 @@ public class Player : MonoBehaviour
     {
         Debug.Log(context);
         if (context.phase == InputActionPhase.Started) {
-            rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
-            jumpcount++;
+            if (jumpcount <= 1)
+            {
+                rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+                jumpcount++;
+            }
         }
     }
 
