@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 25937600}
   - component: {fileID: 25937599}
   m_Layer: 0
-  m_Name: MonsterSpon
+  m_Name: MonsterSponUnder
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -152,14 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb6b2deea5e86e4ebdf4f5cf69dec42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mon1Prefab: {fileID: 1127717741491452013, guid: b2f67257550bcef4b9c672fcc3a062a5, type: 3}
-  mon2Prefab: {fileID: 8721438128241256150, guid: 5c82dcc7572e72444b0ef1dc2d409612, type: 3}
-  mon3Prefab: {fileID: 508575520286134864, guid: f10a947cd8c86e540b6faf9e4719548d, type: 3}
-  mon4Prefab: {fileID: 7342954290505237616, guid: 78bd46ab1d0d84b4baf483a9704680ae, type: 3}
+  mon1Prefab: {fileID: 7342954290505237616, guid: 78bd46ab1d0d84b4baf483a9704680ae, type: 3}
+  mon2Prefab: {fileID: 508575520286134864, guid: f10a947cd8c86e540b6faf9e4719548d, type: 3}
   mon1delay: 2
-  mon2delay: 4
-  mon3delay: 20
-  mon4delay: 10
+  mon2delay: 20
   isresponed: 0
 --- !u!4 &25937600
 Transform:
@@ -174,13 +170,62 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &838884260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4619591039727548300, guid: d1c057c42b5a6c341a120d2efee91048, type: 3}
   m_PrefabInstance: {fileID: 2116135531}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &877702748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 877702750}
+  - component: {fileID: 877702749}
+  m_Layer: 0
+  m_Name: MonsterSponMiddle
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &877702749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877702748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb6b2deea5e86e4ebdf4f5cf69dec42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mon1Prefab: {fileID: 1127717741491452013, guid: b2f67257550bcef4b9c672fcc3a062a5, type: 3}
+  mon2Prefab: {fileID: 8721438128241256150, guid: 5c82dcc7572e72444b0ef1dc2d409612, type: 3}
+  mon1delay: 2
+  mon2delay: 4
+  isresponed: 0
+--- !u!4 &877702750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877702748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958978798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1854,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1692908474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1692908476}
+  - component: {fileID: 1692908475}
+  m_Layer: 0
+  m_Name: MonsterSponHigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1692908475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692908474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb6b2deea5e86e4ebdf4f5cf69dec42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mon1Prefab: {fileID: 1127717741491452013, guid: b2f67257550bcef4b9c672fcc3a062a5, type: 3}
+  mon2Prefab: {fileID: 8721438128241256150, guid: 5c82dcc7572e72444b0ef1dc2d409612, type: 3}
+  mon1delay: 2
+  mon2delay: 4
+  isresponed: 0
+--- !u!4 &1692908476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692908474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 4.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2060676186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1997,7 @@ PrefabInstance:
       objectReference: {fileID: 838884260}
     - target: {fileID: 4708448911118551916, guid: d1c057c42b5a6c341a120d2efee91048, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4708448911118551916, guid: d1c057c42b5a6c341a120d2efee91048, type: 3}
       propertyPath: m_LocalPosition.x
