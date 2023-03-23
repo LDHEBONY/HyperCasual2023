@@ -8,6 +8,8 @@ public class Star : MonoBehaviour
     float attackSpeed = 5f;
     Collider2D col;
     Rigidbody2D rb;
+    [SerializeField]
+    Camera mainCamera;
 
     private void Start() {
         col = GetComponent<Collider2D>();
@@ -16,8 +18,10 @@ public class Star : MonoBehaviour
 
     }
 
-    private void Update() {
-        
+    private void Update() {//if문 조건 변경 필요
+        if(mainCamera.orthographicSize * 2 < transform.position.x) {
+            Destroy(gameObject);
+        }
     }
 
 

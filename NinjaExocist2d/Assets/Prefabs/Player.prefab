@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d620b76926bfb4aa69f31ab563be51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  star: {fileID: 0}
+  star: {fileID: 3779007409069061232, guid: 05c079fa841885444a3166be066a13a6, type: 3}
   attackPos: {fileID: 0}
 --- !u!50 &4708448911118551915
 Rigidbody2D:

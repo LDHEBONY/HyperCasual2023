@@ -38,6 +38,7 @@ public class ResponPoint : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //isresponed가 false가 되면 모든 코루틴이 다시 시작하는 문제가 있음.
         if (isresponed == false)
         {
             StartCoroutine(Spawn(mon1delay, mon1Prefab));
@@ -58,6 +59,7 @@ public class ResponPoint : MonoBehaviour
         isresponed = true;
         yield return new WaitForSecondsRealtime(delay);
         Vector2 spawnvec = new Vector2(this.transform.position.x, this.transform.position.y);
+        //태그로 관리해야함
         if(monster.name == "Monster1")
         {
             spawnvec.y += 6f; 
