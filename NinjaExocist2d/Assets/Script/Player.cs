@@ -12,19 +12,11 @@ public class Player : MonoBehaviour
     public float speed;
     public int jumpcount;
 
-    //public bool onjump;
-    //public bool ondoublejump;
-
-    // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-
-        //onjump = false;
-        //ondoublejump = false;
     }
 
-    // Update is called once per frame
     public void OnClick(InputAction.CallbackContext context)
     {
         Debug.Log(context);
@@ -35,11 +27,6 @@ public class Player : MonoBehaviour
             jumpcount++;
         }
     }
-
-    //public void CharMove()
-    //{
-    //    transform.Translate(speed * Vector3.right * Time.deltaTime, Space.World);
-    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

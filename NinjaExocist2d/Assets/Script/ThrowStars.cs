@@ -9,7 +9,7 @@ public class ThrowStars : MonoBehaviour
     float starsNum = 3;
     IEnumerator attackRoutine = null;
     public Transform attackPos;
-    // Start is called before the first frame update
+
     void Start()
     {
         if(attackRoutine == null) {

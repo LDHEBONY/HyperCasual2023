@@ -9,15 +9,6 @@ public class Monster : MonoBehaviour
     public float deadCount = 0;
     public bool isdead = false;
 
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(movespeed * Vector3.left * Time.deltaTime, Space.World);
@@ -36,7 +27,6 @@ public class Monster : MonoBehaviour
     public void Dead()
     {
         isdead = true;
-        //this는 이 스크립트를 파괴하므로 gameObject로 변경(= this.gameobject 하면 이 스크립트가 속한 오브젝트를 파괴함<어짜피 같은거네>)
-        Destroy(this.gameObject);        
+        Destroy(gameObject);        
     }
 }

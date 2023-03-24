@@ -156,7 +156,6 @@ MonoBehaviour:
   mon2Prefab: {fileID: 508575520286134864, guid: f10a947cd8c86e540b6faf9e4719548d, type: 3}
   mon1delay: 2
   mon2delay: 20
-  isresponed: 0
 --- !u!4 &25937600
 Transform:
   m_ObjectHideFlags: 0
@@ -210,7 +209,6 @@ MonoBehaviour:
   mon2Prefab: {fileID: 8721438128241256150, guid: 5c82dcc7572e72444b0ef1dc2d409612, type: 3}
   mon1delay: 2
   mon2delay: 4
-  isresponed: 0
 --- !u!4 &877702750
 Transform:
   m_ObjectHideFlags: 0
@@ -1887,7 +1885,6 @@ MonoBehaviour:
   mon2Prefab: {fileID: 8721438128241256150, guid: 5c82dcc7572e72444b0ef1dc2d409612, type: 3}
   mon1delay: 2
   mon2delay: 4
-  isresponed: 0
 --- !u!4 &1692908476
 Transform:
   m_ObjectHideFlags: 0
@@ -1995,6 +1992,14 @@ PrefabInstance:
       propertyPath: attackPos
       value: 
       objectReference: {fileID: 838884260}
+    - target: {fileID: 3563587765302838609, guid: d1c057c42b5a6c341a120d2efee91048, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4708448911118551915, guid: d1c057c42b5a6c341a120d2efee91048, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4708448911118551916, guid: d1c057c42b5a6c341a120d2efee91048, type: 3}
       propertyPath: m_RootOrder
       value: 3
