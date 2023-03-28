@@ -5,7 +5,7 @@ using UnityEngine;
 public class Star : MonoBehaviour
 {
     float damage = 1;
-    float attackSpeed = 5f;
+    public float attackSpeed = 15f;
     Collider2D col;
     Rigidbody2D rb;
     [SerializeField]
@@ -19,7 +19,7 @@ public class Star : MonoBehaviour
     }
 
     private void Update() {//if문 조건 변경 필요
-        if(mainCamera.orthographicSize * 2 < transform.position.x) {
+        if(8f < transform.position.x) {
             Destroy(gameObject);
         }
     }

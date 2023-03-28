@@ -25,9 +25,9 @@ public class ThrowStars : MonoBehaviour
             while (currentNum > 0) {
                 currentNum--;
                 ThrowStar();
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
             maxNum = starsNum;
             currentNum = maxNum;
         }

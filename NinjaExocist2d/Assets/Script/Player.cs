@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float speed;
     public int jumpcount;
 
+
     public float maxlife = 3;
     public float life;
 
@@ -39,10 +40,16 @@ public class Player : MonoBehaviour
     {
         Debug.Log(context);
         if (context.phase == InputActionPhase.Started && jumpcount < 2) {
-            float high = transform.position.y;
-            rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
-            //addforce를 쓰니까 연속으로 뛰었을 때 점프 가속력이 높아지는 문제가 있음
-            //점프동작 후에 점프처리를 할 수 있도록 코루틴쓰는건 어떨까요??
+            //float high = transform.position.y;
+            //if (jumpcount == 0) {
+            rigid.velocity = Vector2.up * JumpPower;
+            //}
+            //else if (jumpcount == 1) {
+            //    float doubleJumpRes = Mathf.Sqrt(20 * (4f - transform.position.y));
+            //    rigid.velocity = Vector2.up * doubleJumpRes;
+            //}
+
+            //rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
             jumpcount++;
         }
     }
