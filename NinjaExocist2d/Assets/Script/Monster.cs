@@ -9,6 +9,8 @@ public class Monster : MonoBehaviour
     public float maxlife = 3;
     public bool isdead = false;
 
+    public int slayscore = 100;
+
     private void Start()
     {
         life = maxlife; // 시작할때 최대체력 설정하고 라이프가 깎이도록 설정했습니다.
@@ -25,6 +27,7 @@ public class Monster : MonoBehaviour
             life--;
             Destroy(collision.gameObject);
             if (life <= 0) {
+                GameManager.Instance.AddScore(slayscore);
                 Dead();
             }
         }
