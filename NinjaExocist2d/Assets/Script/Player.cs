@@ -59,13 +59,13 @@ public class Player : MonoBehaviour
 
     void Dead()
     {
-        isdead = true;
         Quaternion deadani = new Quaternion(0, 0, 90, 0);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, deadani, speed * Time.deltaTime);
         //임시 애니메이션입니다. (쿼터니온을 이용한 회전 구현)
 
         Invoke("Destroying", 1f); // 죽기전에 쓰러지는 행동을 하고 사라지는 것을 의도
+        isdead = true;
     }
 
     void Destroying()
