@@ -28,4 +28,9 @@ public class HealthBar : MonoBehaviour
         healthbar.maxValue = player.maxlife;
         healthText.text = $"{healthbar.value} / {healthbar.maxValue}";
     }
+
+    public void OnCilckGameStart()
+    {
+        gameObject.SetActive(true);
+    }
 }

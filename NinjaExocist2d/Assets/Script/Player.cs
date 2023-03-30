@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public float life;
 
     public bool isdead = false;
+    public bool isFreeze = true;
 
     void Start()
     {
@@ -32,14 +33,16 @@ public class Player : MonoBehaviour
             Dead();
 
             return;
-        }
-        
+        }        
+    }
+    public void OnCilckGameStart()
+    {
+        isFreeze = false;
     }
 
     public void OnClick(InputAction.CallbackContext context)
     {
-        Debug.Log(context);
-        if (context.phase == InputActionPhase.Started && jumpcount < 2) {
+        if (context.phase == InputActionPhase.Started && jumpcount < 2 && isFreeze == false) {
             //float high = transform.position.y;
             //if (jumpcount == 0) {
             rigid.velocity = Vector2.up * JumpPower;

@@ -13,11 +13,15 @@ public class ResponPoint : MonoBehaviour
    
     public float mon1delay;
     public float mon2delay;
+    public bool isStart = false;
    
-    void Start()
+    public void SpawnStart()
     {
-        StartCoroutine(Spawn(mon1delay, mon1Prefab));
-        StartCoroutine(Spawn(mon2delay, mon2Prefab));
+        if (isStart)
+        {
+            StartCoroutine(Spawn(mon1delay, mon1Prefab));
+            StartCoroutine(Spawn(mon2delay, mon2Prefab));
+        }
     }
 
     private IEnumerator Spawn(float delay, GameObject monster)

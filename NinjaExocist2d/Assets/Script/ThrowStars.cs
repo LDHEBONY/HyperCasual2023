@@ -9,20 +9,25 @@ public class ThrowStars : MonoBehaviour
     float starsNum = 3;
     IEnumerator attackRoutine = null;
     public Transform attackPos;
+    public bool throwStart = false;
 
-    void Start()
+    void Update()
     {
-        if(attackRoutine == null) {
+        if(attackRoutine == null && throwStart) {
             attackRoutine = attack();
             StartCoroutine(attackRoutine);
         }
     }
 
+
+
     IEnumerator attack() {
         float maxNum = starsNum;
         float currentNum = maxNum;
-        while (true) {
-            while (currentNum > 0) {
+        while (true)
+        {
+            while (currentNum > 0)
+            {
                 currentNum--;
                 ThrowStar();
                 yield return new WaitForSeconds(0.05f);
@@ -31,10 +36,9 @@ public class ThrowStars : MonoBehaviour
             maxNum = starsNum;
             currentNum = maxNum;
         }
-
     }
 
-    void ThrowStar() {
+    public void ThrowStar() {
         Instantiate(star, attackPos);
     }
 }
